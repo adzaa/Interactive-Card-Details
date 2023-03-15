@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/custom.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div
+          class="col-lg-6 credit-cards d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="credit-card-front">
+            <img class="image-front" src="images/bg-card-front.png" />
+            <div class="front-content">
+              <div class="card-logo"><img src="images/card-logo.svg" /></div>
+              <div class="card-numbers">
+                <p id="card-number">0000 0000 0000 0000</p>
+              </div>
+              <div class="card-bottom d-flex justify-content-between">
+                <div class="card-holder">
+                  <p id="card-holder-id">jake appleseed</p>
+                </div>
+                <div class="card-cv">
+                  <p id="card-exp">00/00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="credit-card-back mt-4">
+            <img class="image-back" src="images/bg-card-back.png" />
+            <div
+              class="back-content d-flex align-items-center justify-content-end"
+            >
+              <div class="cv-numbers">
+                <p id="cv-number">000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-6 input-container d-flex justify-content-center align-items-center"
+        >
+          <div id="form" class="form-container">
+            <div id="form-content">
+              <div class="input-field">
+                <label for="name">Cardholder Name</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Jane Appleseed"
+                  id="name"
+                  name="name"
+                  maxlength="25"
+                  class="name-input"
+                />
+                <p class="error" id="name-error">Can`t be blank</p>
+              </div>
+              <div class="input-field">
+                <label for="number">Card Number</label>
+                <input
+                  type="text"
+                  placeholder="e.g. 1234 5678 9123 0000"
+                  id="number"
+                  name="number"
+                  minlength="19"
+                  maxlength="19"
+                  id="cr_no"
+                  class="number-input"
+                />
+                <p class="error" id="cc-error">Wrong format, numbers only</p>
+              </div>
+              <div class="flex-row">
+                <div class="input-field date-container">
+                  <label id="date">Exp. Date (MM/YY)</label>
+                  <div class="date-input">
+                    <input
+                      type="text"
+                      placeholder="MM"
+                      id="month"
+                      name="month"
+                      aria-labelledby="date"
+                      class="date month-input"
+                      maxlength="2"
+                    />
+                    <input
+                      type="text"
+                      placeholder="YY"
+                      id="year"
+                      name="year"
+                      aria-labelledby="date"
+                      class="date year-input"
+                      maxlength="2"
+                    />
+                  </div>
+                  <p class="error" id="exp-error">Can`t be blank</p>
+                </div>
+                <div class="input-field">
+                  <label for="cvc">CVC</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. 123"
+                    id="cvc"
+                    name="cvc"
+                    maxlength="4"
+                    class="cvc-input"
+                  />
+                  <p class="error" id="cvc-error">Can`t be blank</p>
+                </div>
+              </div>
+              <button id="submit" onclick="submit()" class="btnn">
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="abdulah-dzankic.netlify.app/">Abdulah Džankić</a>.
+    </div> -->
+  </body>
+  <script src="index.js"></script>
+</html>
